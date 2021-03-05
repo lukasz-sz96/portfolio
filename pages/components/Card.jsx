@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
-const Card = ({ gradient, large, href, children }) => {
+const Card = ({ gradient, size, href, children }) => {
   return (
     <Link href={`${href ? href : "/"}`}>
       <motion.div
@@ -11,12 +11,9 @@ const Card = ({ gradient, large, href, children }) => {
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.2 }}
         exit={{ opacity: 0, scale: 0.5 }}
-        className={`${gradient ? "gradient" : null} ${
-          large ? "w-2/3" : "w-3/12"
-        } h-96 bg-gray-700 m-3 min-w-min`}
+        className={`${gradient ? "gradient" : null} md:w-${size} w-full h-96 bg-gray-700 mb-3 md:m-3 min-w-min text-left text-white flex flex-row`}
       >
         {children}
-        TEST
       </motion.div>
     </Link>
   );
