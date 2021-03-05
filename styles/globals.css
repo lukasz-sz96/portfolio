@@ -1,68 +1,83 @@
- @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 @-webkit-keyframes bg-scrolling-reverse {
-  100% { background-position: -150px 150px; }
+  100% {
+    background-position: -150px 150px;
+  }
 }
-@-moz-keyframes    bg-scrolling-reverse {
-  100% { background-position: -150px 150px; }
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: -150px 150px;
+  }
 }
-@-o-keyframes      bg-scrolling-reverse {
-  100% { background-position: -150px 150px; }
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: -150px 150px;
+  }
 }
-@keyframes         bg-scrolling-reverse {
-  100% { background-position: -150px 150px; }
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: -150px 150px;
+  }
 }
 
 @-webkit-keyframes bg-scrolling {
-  0% { background-position: -150px 150px; }
+  0% {
+    background-position: -150px 150px;
+  }
 }
-@-moz-keyframes    bg-scrolling {
-  0% { background-position: -150px 150px; }
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: -150px 150px;
+  }
 }
-@-o-keyframes      bg-scrolling {
-  0% { background-position: -150px 150px; }
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: -150px 150px;
+  }
 }
-@keyframes         bg-scrolling {
-  0% { background-position: -150px 150px; }
+@keyframes bg-scrolling {
+  0% {
+    background-position: -150px 150px;
+  }
 }
 
 /* Main styles */
 body {
-  
   color: #999;
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   text-align: center;
   /* img size is 50x50 */
   background: url("gridme.png") repeat 0 0;
-  
-  -webkit-animation: bg-scrolling-reverse 10s infinite; /* Safari 4+ */
-  -moz-animation:    bg-scrolling-reverse 10s infinite; /* Fx 5+ */
-  -o-animation:      bg-scrolling-reverse 10s infinite; /* Opera 12+ */
-  animation:         bg-scrolling-reverse 10s infinite; /* IE 10+ */
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function:    linear;
-  -o-animation-timing-function:      linear;
-  animation-timing-function:         linear;
-  
 
+  -webkit-animation: bg-scrolling-reverse 10s infinite; /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 10s infinite; /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 10s infinite; /* Opera 12+ */
+  animation: bg-scrolling-reverse 10s infinite; /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
-
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .gradient {
   background: linear-gradient(-45deg, #ee7752, #e66060, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }

@@ -1,4 +1,3 @@
-import "tailwindcss/tailwind.css";
 import "../styles/globals.css";
 
 import { AnimatePresence } from "framer-motion";
