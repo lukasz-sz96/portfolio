@@ -14,8 +14,9 @@ const Test = () => {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex flex-row flex-wrap pl-32 pr-32 pt-10">
-          <Card href="/" size="2/3" gradient key="card-3" />
+      <div className="flex flex-col md:flex-row flex-wrap md:pl-32 md:pr-32 md:pt-10">
+          <Card href="/" size="2/4" gradient key="card-4" />
+          <Card href="/" size="1/3" key="card-5" />
       </div>
     </div>
   );
