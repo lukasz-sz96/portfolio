@@ -3,7 +3,7 @@ import Card from "./components/Card";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const App = () => {
+const Test = () => {
   const [visible, setVisible] = useState(true);
   setTimeout(() => {
     // setVisible(false)
@@ -14,14 +14,11 @@ const App = () => {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex flex-row flex-wrap pl-32 pr-32 pt-10">
-        <Card href="/test" large gradient key="card-1" />
-        <Card key="card-2" />
-        <Card key="card-3" />
-        <Card large gradient />)
+      <div className="flex flex-row flex-wrap p-32">
+          <Card href="/" large gradient key="card-3" />
       </div>
     </div>
   );
 };
 
-export default App;
+export default Test;
