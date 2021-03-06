@@ -1,8 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 @-webkit-keyframes bg-scrolling-reverse {
   100% {
@@ -51,7 +51,6 @@ body {
   color: #999;
   font-family: "Varela Round", sans-serif;
   text-align: center;
-  /* img size is 50x50 */
   background: url("gridme.png") repeat 0 0;
 
   -webkit-animation: bg-scrolling-reverse 10s infinite; /* Safari 4+ */

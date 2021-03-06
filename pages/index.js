@@ -1,9 +1,8 @@
 import Head from "next/head";
-import Card from "./components/Card";
+import Card from "../components/Card";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AiOutlineMail } from "react-icons/ai";
-
 const App = () => {
   const [visible, setVisible] = useState(true);
 
@@ -42,12 +41,16 @@ const App = () => {
             dictum at.
           </div>
         </Card>
+
         <Card size="1/3" key="card-2">
           Tech stack (todo)
         </Card>
         <Card href="/projects" size="1/4" key="card-3">
-            <AiOutlineMail className="text-9xl m-auto" /><br /><br /><br />
-            <h2 className="m-auto text-xl">Contact me</h2>
+          <AiOutlineMail className="text-9xl m-auto" />
+          <br />
+          <br />
+          <br />
+          <h2 className="m-auto text-xl">Contact me</h2>
         </Card>
         <Card href="/projects" size="2/5">
           <h2 className="m-auto text-3xl underline">Check out my projects</h2>
