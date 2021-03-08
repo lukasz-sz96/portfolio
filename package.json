@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@jinsung.lim/tailwindcss-filters": "^0.1.1",
     "framer-motion": "^3.10.0",
     "next": "10.0.7",
     "postcss-flexbugs-fixes": "^5.0.2",
