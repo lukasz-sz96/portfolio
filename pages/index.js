@@ -1,10 +1,12 @@
 import Head from "next/head";
 import Card from "../components/Card";
+import TechStackCard from "../components/TechStackCard";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AiOutlineMail } from "react-icons/ai";
 const App = () => {
   const [visible, setVisible] = useState(true);
+  const [contactCardClicked, setContactCardClicked] = useState(false);
 
   const wrapperStyle =
     "flex flex-col md:flex-row flex-wrap md:pl-32 md:pr-32 md:pt-10";
@@ -43,16 +45,38 @@ const App = () => {
         </Card>
 
         <Card size="1/3" key="card-2">
-          Tech stack (todo)
+          <TechStackCard />
         </Card>
-        <Card href="/projects" size="1/4" key="card-3">
-          <AiOutlineMail className="text-9xl m-auto" />
-          <br />
-          <br />
-          <br />
-          <h2 className="m-auto text-xl">Contact me</h2>
+        <Card animateHover size="1/4" key="card-3">
+          <motion.div
+            onClick={() => setContactCardClicked(!contactCardClicked)}
+            className="w-full h-full flex"
+          >
+            {!contactCardClicked ? (
+              <AnimatePresence>
+                <AiOutlineMail className="text-9xl m-auto" />
+
+                <motion.h2
+                  initial={{ scale: 0.7, opacity: 0, translateY: 50 }}
+                  animate={{ scale: 1, opacity: 1, scale: 1.1, translateY: 0 }}
+                  exit={{ opacity: 0 }}
+                  className="m-auto text-xl"
+                >
+                  Contact me
+                </motion.h2>
+              </AnimatePresence>
+            ) : (
+              <motion.h2
+                initial={{ opacity: 0, translateY: -50 }}
+                animate={{ opacity: 1, scale: 1.1, translateY: 0 }}
+                className="m-auto text-xl"
+              >
+                lukasz-sz96@gmail.com
+              </motion.h2>
+            )}
+          </motion.div>
         </Card>
-        <Card href="/projects" size="2/5">
+        <Card animateHover href="/projects" size="2/5">
           <h2 className="m-auto text-3xl underline">Check out my projects</h2>
         </Card>
       </div>
