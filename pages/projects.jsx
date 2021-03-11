@@ -12,19 +12,22 @@ const Projects = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex flex-col md:flex-row flex-wrap md:pl-32 md:pr-32 md:pt-10">
-        <Card href="" size="1/3" animateHover demo="https://google.com" source="URL">
+        <Card href="" size="1/3" animateHover source="https://google.com">
           <h2 className="m-auto text-7xl p-4">Portfolio</h2>
           <div className="flex flex-col items-right justify-center text-center overflow-hidden">
-            <Tag type="Node.js" />
             <Tag type="Next.js" />
+            <Tag type="Tailwind.css" />
           </div>
         </Card>
-        <Card href="" size="1/3" source="https://google.com/">
+        <Card href="" size="1/3" animateHover demo="https://google.com/" source="https://google.com/">
           <h2 className="m-auto text-7xl bg-blue-500 p-4 rounded-3xl">blog</h2>
           <div className="flex flex-col items-right justify-center text-center overflow-hidden">
-            <Tag type="Node.js" />
             <Tag type="Next.js" />
+            <Tag type="MongoDB" />
           </div>
+        </Card>
+        <Card href="/" size="1/7" animateHover small red>
+          <h2 className="m-auto text-7xl p-4">Return</h2>
         </Card>
       </div>
     </div>
