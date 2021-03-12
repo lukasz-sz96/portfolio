@@ -11,7 +11,8 @@ const Card = ({
   demo,
   source,
   small,
-  red
+  red,
+  scroll
 }) => {
   const [isHovering, setIsHovering] = useState(false);
 
@@ -38,7 +39,7 @@ const Card = ({
         </motion.a>
       )}
         
-        <Link replace href={source}>
+        <Link replace href={source} scroll={false}>
           <motion.a
           target="_blank"
           href={source}
@@ -68,15 +69,15 @@ const Card = ({
         }}
         key={`card-${href}`}
         initial={{ scale: 0.2, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
+        animate={{ scale: 1, opacity: 0.85 }}
         whileHover={animateHover && { scale: 1.03 }}
         transition={{ duration: 0.2 }}
         exit={{ opacity: 0, scale: 0.5 }}
         className={`${
           gradient && "gradient"
-        } md:w-${size} h-${small ? '48' : '96'} ${red ? 'bg-red-700' : 'bg-gray-700'} mb-3 md:m-3 min-w-min text-left text-white flex flex-row flex-wrap`}
+        } md:w-${size} h-${small ? '36' : '96'} ${red ? 'bg-red-700' : 'bg-gray-700'} mb-4 md:m-3 text-left text-white flex flex-row flex-wrap`}
       >
-        <Link href={`${href ? href : ""}`}>
+        <Link href={`${href ? href : ""}`} scroll={scroll}>
         <div
           className={`flex flex-row w-full transition-all ${
             isHovering && source && "filter filter-blur-10"
