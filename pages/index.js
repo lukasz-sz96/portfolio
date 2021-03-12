@@ -69,10 +69,13 @@ const App = () => {
         <Card size="1/3" key="card-2" scroll={false}>
           <TechStackCard />
         </Card>
-        <Card animateHover size="1/4" key="card-3" scroll={false}>
+        <Card animateHover href="/projects" size="2/5">
+          <h2 className="m-auto text-3xl underline">Check out my projects</h2>
+        </Card>
+        <Card animateHover size="4/12" key="card-3" scroll={false} small>
           <motion.div
             onClick={() => setContactCardClicked(!contactCardClicked)}
-            className="w-full h-full flex"
+            className="w-full h-full flex p-2"
           >
             {!contactCardClicked ? (
               <AnimatePresence>
@@ -99,9 +102,7 @@ const App = () => {
             )}
           </motion.div>
         </Card>
-        <Card animateHover href="/projects" size="2/5">
-          <h2 className="m-auto text-3xl underline">Check out my projects</h2>
-        </Card>
+        
       </div>
     </div>
   );
