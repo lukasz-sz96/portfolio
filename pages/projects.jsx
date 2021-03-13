@@ -38,7 +38,7 @@ const Projects = (props) => {
             <Tag type="MongoDB" />
           </div>
         </Card>
-        <Card href="/" size="1/7" animateHover small red>
+        <Card href="/" size="1/7" animateHover small red language={lang}>
           <h2 className="m-auto text-7xl p-4">{locale[lang]["return"]}</h2>
         </Card>
       </div>

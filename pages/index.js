@@ -2,16 +2,25 @@ import Head from "next/head";
 import Card from "../components/Card";
 import TechStackCard from "../components/TechStackCard";
 import LangSwitch from "../components/LangSwitch"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { AiOutlineMail } from "react-icons/ai";
+import {useRouter} from 'next/router'
 import locale from '../locale'
 
 const App = () => {
   const [visible, setVisible] = useState(true);
   const [contactCardClicked, setContactCardClicked] = useState(false);
   const [titleCardClicked, setTitleCardClicked] = useState(false);
-  const [lang, setLang] = useState("en")
+
+  const router = useRouter()
+  const [lang, setLang] = useState(router.query.lang || "en")
+
+
+
+  useEffect(() => {
+    setLang(router.query.lang || "en")
+  }, []);
 
   const cycleLanguage = () => {
     setLang(lang === "pl" ? 'en' : 'pl')
