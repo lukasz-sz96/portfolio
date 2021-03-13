@@ -16,7 +16,10 @@ const Card = ({
 }) => {
   const [isHovering, setIsHovering] = useState(false);
 
-  const handleMouse = () => {
+  const handleMouse = (e) => {
+    if (e) {
+      console.log(e.target.id)
+    }
     setIsHovering(!isHovering);
   };
 
@@ -25,6 +28,7 @@ const Card = ({
       <>
       {demo && (
         <motion.a
+        id="demo"
           target="_blank"
           href={demo}
           rel="noopener noreferrer"
@@ -41,6 +45,7 @@ const Card = ({
         
         <Link replace href={source} scroll={false}>
           <motion.a
+          id="source"
           target="_blank"
           href={source}
           rel="noopener noreferrer"
@@ -71,6 +76,7 @@ const Card = ({
         initial={{ scale: 0.2, opacity: 0 }}
         animate={{ scale: 1, opacity: 0.85 }}
         whileHover={animateHover && { scale: 1.03 }}
+        onTap={(e) => handleMouse(e)}
         transition={{ duration: 0.2 }}
         exit={{ opacity: 0, scale: 0.5 }}
         className={`${
@@ -87,7 +93,7 @@ const Card = ({
         </div>
         </Link>
         {isHovering && (
-          <div className="flex flex-row w-full absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 z-50">
+          <div className="flex flex-col lg:flex-row w-full absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 z-50">
             {source && <Options />}
           </div>
         )}
