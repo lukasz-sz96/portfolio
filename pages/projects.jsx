@@ -8,7 +8,7 @@ const Projects = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 768 ? true : false);
+    setIsMobile(window?.innerWidth < 768 ? true : false);
   }, []);
   return (
     <div>
@@ -18,7 +18,7 @@ const Projects = () => {
       </Head>
       <div className="flex flex-col md:flex-row flex-wrap md:pl-32 md:pr-32 md:pt-10">
         <Card href="" size="1/3" animateHover source="https://google.com" isMobile={isMobile}>
-          <h2 className="m-auto text-7xl p-4">Portfolio</h2>
+          <h2 className="m-auto text-5xl xl:text-7xl text- p-4">Portfolio</h2>
           <div className="flex flex-col items-right justify-center text-center overflow-hidden">
             <Tag type="Next.js" />
             <Tag type="Tailwind.css" />

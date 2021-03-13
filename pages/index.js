@@ -8,7 +8,7 @@ const App = () => {
   const [visible, setVisible] = useState(true);
   const [contactCardClicked, setContactCardClicked] = useState(false);
   const [titleCardClicked, setTitleCardClicked] = useState(false);
-  
+
   const wrapperStyle =
     "flex flex-col md:flex-row flex-wrap md:pl-32 md:pr-32 md:pt-10 max-h-full";
   return (

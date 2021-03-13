@@ -84,23 +84,25 @@ const Card = ({
       <Link href={`${href ? href : ""}`} scroll={scroll}>
         <div
           className={`flex flex-row w-full transition-all ${
-            isHovering && source && "filter lg:filter-blur-10"
-          }`}
+            gradient ? "h-full" : "h-auto"
+          } ${isHovering && source && "filter lg:filter-blur-10"}`}
         >
           {children}
         </div>
       </Link>
-      {!isMobile ? (
-        isHovering && (
-          <div className="flex flex-col flex-wrap lg:flex-row w-2/3 lg:w-1/2 relative lg:absolute top-1/3 lg:top-1/2 right-1/2 transform translate-x-full lg:translate-x-1/2 -translate-y-1/2 z-50">
-            {source && <Options />}
-          </div>
-        )
-      ) : (
-        <div className="flex flex-col flex-wrap lg:flex-row w-2/3 lg:w-1/2 relative lg:absolute top-1/3 lg:top-1/2 right-1/2 transform translate-x-full lg:translate-x-1/2 -translate-y-1/2 z-50">
-          {source && <Options />}
-        </div>
-      )}
+      {!isMobile
+        ? isHovering && (
+          source && (
+            <div className="flex flex-col flex-wrap lg:flex-row w-2/3 lg:w-1/2 relative lg:absolute top-1/3 lg:top-1/2 right-1/2 transform translate-x-full lg:translate-x-1/2 -translate-y-1/2 z-50">
+              <Options />
+            </div>
+          )
+          )
+        : source && (
+            <div className="flex flex-col flex-wrap lg:flex-row w-2/3 lg:w-1/2 relative lg:absolute top-1/3 lg:top-1/2 right-1/2 transform translate-x-full lg:translate-x-1/2 -translate-y-1/2 z-50">
+              <Options />
+            </div>
+          )}
     </motion.div>
   );
 };
