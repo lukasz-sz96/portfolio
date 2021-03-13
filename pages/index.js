@@ -8,7 +8,7 @@ const App = () => {
   const [visible, setVisible] = useState(true);
   const [contactCardClicked, setContactCardClicked] = useState(false);
   const [titleCardClicked, setTitleCardClicked] = useState(false);
-
+  
   const wrapperStyle =
     "flex flex-col md:flex-row flex-wrap md:pl-32 md:pr-32 md:pt-10 max-h-full";
   return (
@@ -44,7 +44,7 @@ const App = () => {
             ) : (
               <motion.div
                 // initial={{ scale: 0.7, opacity: 0, translateY: 50 }}
-                animate={{ scale: 1, opacity: 1, scale: 1.1}}
+                animate={{ scale: 1, opacity: 1, scale: 1.1 }}
                 className="text-sm md:text-base"
                 // exit={{ opacity: 0 }}
               >
@@ -102,7 +102,6 @@ const App = () => {
             )}
           </motion.div>
         </Card>
-        
       </div>
     </div>
   );
