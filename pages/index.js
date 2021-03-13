@@ -11,7 +11,7 @@ const App = () => {
   const [visible, setVisible] = useState(true);
   const [contactCardClicked, setContactCardClicked] = useState(false);
   const [titleCardClicked, setTitleCardClicked] = useState(false);
-  const [lang, setLang] = useState("pl")
+  const [lang, setLang] = useState("en")
 
   const cycleLanguage = () => {
     setLang(lang === "pl" ? 'en' : 'pl')
