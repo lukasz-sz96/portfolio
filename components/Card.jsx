@@ -15,8 +15,6 @@ const Card = ({
   isMobile,
   language
 }) => {
-  // const {locale, lang} = language[0]
-  console.log(language)
   const [isHovering, setIsHovering] = useState(false);
 
   const handleMouse = (e) => {
@@ -93,7 +91,7 @@ const Card = ({
         </div>
       </Link>
       {!isMobile
-        ? isHovering && (
+        ? isHovering && ( //TODO: For some reason || conditionals didn't work? Make me less ugly.
           source && (
             <div className="flex flex-col flex-wrap lg:flex-row w-2/3 lg:w-1/2 relative lg:absolute top-1/3 lg:top-1/2 right-1/2 transform translate-x-full lg:translate-x-1/2 -translate-y-1/2 z-50">
               <Options />
