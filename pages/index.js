@@ -57,7 +57,7 @@ const App = () => {
             ) : (
               <motion.div
                 animate={{ scale: 1, opacity: 1, scale: 1.1 }}
-                className="text-sm m-2 mt-0 pt-0"
+                className="text-xs xl:text-sm m-2 mt-0 pt-0"
               >
                 <p>{locale[lang]["titleDescription"][0]}</p>
                 <br />
