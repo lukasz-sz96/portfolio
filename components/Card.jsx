@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-
 const Card = ({
   gradient,
   animateHover,
@@ -14,7 +13,10 @@ const Card = ({
   red,
   scroll,
   isMobile,
+  language
 }) => {
+  // const {locale, lang} = language[0]
+  console.log(language)
   const [isHovering, setIsHovering] = useState(false);
 
   const handleMouse = (e) => {
@@ -81,7 +83,7 @@ const Card = ({
         red ? "bg-red-700" : "bg-gray-700"
       } mb-4 md:m-3 text-left text-white flex flex-row flex-wrap`}
     >
-      <Link href={`${href ? href : ""}`} scroll={scroll}>
+      <Link href={{pathname: `${href ? href : ""}`, query: { lang: language ? language : "en"}}} scroll={scroll}>
         <div
           className={`flex flex-row w-full transition-all ${
             gradient ? "h-full" : "h-auto"

@@ -3,12 +3,19 @@ import Card from "../components/Card";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Tag from "../components/Tag";
+import { useRouter } from 'next/router'
+import locale from '../locale'
 
-const Projects = () => {
+
+const Projects = (props) => {
   const [isMobile, setIsMobile] = useState(false);
+  const [lang, setLang] = useState("en")
+  const router = useRouter()
+
 
   useEffect(() => {
     setIsMobile(window?.innerWidth < 768 ? true : false);
+    setLang(router.query.lang || "en")
   }, []);
   return (
     <div>
@@ -32,7 +39,7 @@ const Projects = () => {
           </div>
         </Card>
         <Card href="/" size="1/7" animateHover small red>
-          <h2 className="m-auto text-7xl p-4">Return</h2>
+          <h2 className="m-auto text-7xl p-4">{locale[lang]["return"]}</h2>
         </Card>
       </div>
     </div>

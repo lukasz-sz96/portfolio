@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-const TechStackCard = () => {
+const TechStackCard = ({title}) => {
     const spanClasses = "block text-center border-b m-3"
   return (
     <div className="flex flex-col flex-wrap w-full p-6 relative">
-      <h2 className="text-center text-4xl">I'm using</h2><br />
+      <h2 className="text-center text-4xl">{title}</h2><br />
       <div>
       <span className={spanClasses}>Node.js</span>
       <span className={spanClasses}>React.js</span>

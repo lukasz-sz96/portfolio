@@ -1,13 +1,21 @@
 import Head from "next/head";
 import Card from "../components/Card";
 import TechStackCard from "../components/TechStackCard";
+import LangSwitch from "../components/LangSwitch"
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AiOutlineMail } from "react-icons/ai";
+import locale from '../locale'
+
 const App = () => {
   const [visible, setVisible] = useState(true);
   const [contactCardClicked, setContactCardClicked] = useState(false);
   const [titleCardClicked, setTitleCardClicked] = useState(false);
+  const [lang, setLang] = useState("pl")
+
+  const cycleLanguage = () => {
+    setLang(lang === "pl" ? 'en' : 'pl')
+  }
 
   const wrapperStyle =
     "flex flex-col md:flex-row flex-wrap md:pl-32 md:pr-32 md:pt-10 max-h-full";
@@ -31,15 +39,14 @@ const App = () => {
                 initial={{ scale: 0.7, opacity: 0, translateY: 50 }}
                 animate={{ scale: 1, opacity: 1, scale: 1.1, translateY: 0 }}
               >
-                <h2>Hi! I'm</h2>
-                <h1 className="text-5xl">Łukasz</h1>
+                <h2>{locale[lang]["title"][0]}</h2>
+                <h1 className="text-5xl">{locale[lang]["title"][1]}</h1>
                 <br />
                 <p>
-                  I'm a FrontEnd Developer aspiring to become a Full Stack
-                  Developer.
+                {locale[lang]["title"][2]}
                 </p>
                 <br />
-                <p>Feel free to look around to get to know me better.</p>
+                <p>{locale[lang]["title"][3]}</p>
               </motion.div>
             ) : (
               <motion.div
@@ -49,17 +56,10 @@ const App = () => {
                 // exit={{ opacity: 0 }}
               >
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Mattis ullamcorper velit sed ullamcorper morbi tincidunt.
-                  Condimentum lacinia quis vel eros donec ac.
+                  {locale[lang]["titleDescription"][0]}
                 </p>
                 <p>
-                  Consectetur purus ut faucibus pulvinar elementum. Quis risus
-                  sed vulputate odio ut. Leo vel fringilla est ullamcorper eget
-                  nulla facilisi etiam dignissim. Faucibus pulvinar elementum
-                  integer enim neque volutpat. Nibh ipsum consequat nisl vel
-                  pretium lectus quam. Risus feugiat in ante metus dictum at.
+                {locale[lang]["titleDescription"][1]}
                 </p>
               </motion.div>
             )}
@@ -67,10 +67,10 @@ const App = () => {
         </Card>
 
         <Card size="1/3" key="card-2" scroll={false}>
-          <TechStackCard />
+          <TechStackCard title={locale[lang]["imUsing"]} />
         </Card>
-        <Card animateHover href="/projects" size="2/5">
-          <h2 className="m-auto text-3xl underline">Check out my projects</h2>
+        <Card animateHover href="/projects" size="2/5" language={lang}>
+          <h2 className="m-auto text-3xl underline">{locale[lang]["myProjects"]}</h2>
         </Card>
         <Card animateHover size="4/12" key="card-3" scroll={false} small>
           <motion.div
@@ -88,7 +88,7 @@ const App = () => {
                   exit={{ opacity: 0 }}
                   className="m-auto text-xl"
                 >
-                  Contact me
+                  {locale[lang]["contactMe"]}
                 </motion.h2>
               </AnimatePresence>
             ) : (
@@ -97,12 +97,13 @@ const App = () => {
                 animate={{ opacity: 1, scale: 1.1, translateY: 0 }}
                 className="m-auto text-2xl"
               >
-                lukasz-sz96@gmail.com
+                {locale[lang]["mail"]}
               </motion.h2>
             )}
           </motion.div>
         </Card>
       </div>
+      <LangSwitch cycleLanguage={cycleLanguage} language={lang} />
     </div>
   );
 };
