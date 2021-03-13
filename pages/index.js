@@ -33,17 +33,18 @@ const App = () => {
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <div className={wrapperStyle}>
-        <Card href="" size="2/4" gradient scroll={false} key="card-1">
+        <Card href="" size={titleCardClicked ? '2/4' : '1/4'} gradient scroll={false} key="card-1">
           <div
             onClick={() => {
               setTitleCardClicked(!titleCardClicked);
             }}
-            className="w-full h-full bg-black opacity-50 text-center p-5 md:p-10"
+            className="w-full h-full bg-black opacity-50 p-5 md:p-10"
           >
             {!titleCardClicked ? (
               <motion.div
                 initial={{ scale: 0.7, opacity: 0, translateY: 50 }}
                 animate={{ scale: 1, opacity: 1, scale: 1.1, translateY: 0 }}
+                className="m-4"
               >
                 <h2>{locale[lang]["title"][0]}</h2>
                 <h1 className="text-5xl">{locale[lang]["title"][1]}</h1>
@@ -51,14 +52,18 @@ const App = () => {
                 <p>{locale[lang]["title"][2]}</p>
                 <br />
                 <p>{locale[lang]["title"][3]}</p>
+                <img className="w-1/4 m-auto mt-5 animate-bounce" src="../img/tap.svg" />
               </motion.div>
             ) : (
               <motion.div
                 animate={{ scale: 1, opacity: 1, scale: 1.1 }}
-                className="text-sm md:text-base"
+                className="text-sm m-2 mt-0 pt-0"
               >
                 <p>{locale[lang]["titleDescription"][0]}</p>
+                <br />
                 <p>{locale[lang]["titleDescription"][1]}</p>
+                <br />
+                <p>{locale[lang]["titleDescription"][2]}</p>
               </motion.div>
             )}
           </div>
@@ -67,11 +72,7 @@ const App = () => {
         <Card size="1/3" key="card-2" scroll={false}>
           <TechStackCard title={locale[lang]["imUsing"]} />
         </Card>
-        <Card animateHover href="/projects" size="2/5" language={lang}>
-          <h2 className="m-auto text-3xl underline">
-            {locale[lang]["myProjects"]}
-          </h2>
-        </Card>
+        
         <Card animateHover size="4/12" key="card-3" scroll={false} small>
           <motion.div
             onClick={() => setContactCardClicked(!contactCardClicked)}
@@ -101,6 +102,11 @@ const App = () => {
               </motion.h2>
             )}
           </motion.div>
+        </Card>
+        <Card animateHover href="/projects" size="2/5" language={lang}>
+          <h2 className="m-auto text-3xl underline">
+            {locale[lang]["myProjects"]}
+          </h2>
         </Card>
       </div>
       <LangSwitch cycleLanguage={cycleLanguage} language={lang} />
