@@ -4,7 +4,7 @@ const locale = {
       "Cześć! Jestem",
       "Łukasz",
       "Jestem FrontEnd Developerem aspirującym do osiągnięcia statusu Full Stack Developera.",
-      "Rozejrzyj się, by poznać mnie lepiej.",
+      "Naciśnij tę kartę, by poznać mnie lepiej.",
     ],
     titleDescription: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Condimentum lacinia quis vel eros donec ac.",
@@ -21,7 +21,7 @@ const locale = {
       "Hi! I'm",
       "Łukasz",
       "I'm a FrontEnd Developer aspiring to become a Full Stack Developer.",
-      "Feel free to look around to get to know me better.",
+      "Click this card to get to know me better.",
     ],
     titleDescription: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Condimentum lacinia quis vel eros donec ac.",
