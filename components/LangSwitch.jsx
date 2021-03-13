@@ -7,7 +7,7 @@ const LangSwitch = ({language, cycleLanguage}) => {
         }
     }
     return(
-        <button onClick={() => cycleLanguage()} className="absolute bottom-4 right-4 rounded-md gradient p-2 text-white">Switch to {nextLanguageHint()}</button>
+        <button onClick={() => cycleLanguage()} className="fixed bottom-4 right-4 rounded-md gradient p-2 text-white">Switch to {nextLanguageHint()}</button>
     )
 }
 
