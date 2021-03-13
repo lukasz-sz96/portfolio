@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Card from "../components/Card";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Tag from "../components/Tag";
 import { useRouter } from 'next/router'
 import locale from '../locale'

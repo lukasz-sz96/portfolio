@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Card from "../components/Card";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Test = () => {
   const [visible, setVisible] = useState(true);

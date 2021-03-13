@@ -3,7 +3,7 @@ import Card from "../components/Card";
 import TechStackCard from "../components/TechStackCard";
 import LangSwitch from "../components/LangSwitch"
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { AiOutlineMail } from "react-icons/ai";
 import locale from '../locale'
 
@@ -78,7 +78,7 @@ const App = () => {
             className="w-full h-full flex p-2"
           >
             {!contactCardClicked ? (
-              <AnimatePresence>
+              <>
                 <AiOutlineMail key="mailIcon" className="text-9xl m-auto" />
 
                 <motion.h2
@@ -90,7 +90,7 @@ const App = () => {
                 >
                   {locale[lang]["contactMe"]}
                 </motion.h2>
-              </AnimatePresence>
+              </>
             ) : (
               <motion.h2
                 initial={{ opacity: 0, translateY: -50 }}
