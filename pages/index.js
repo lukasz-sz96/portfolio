@@ -27,7 +27,7 @@ const App = () => {
   const cycleTitleCardState = () => {
     setTitleCardClicked(!titleCardClicked)
   }
-  const cycleContantCardState = () => {
+  const cycleContactCardState = () => {
     setContactCardClicked(!contactCardClicked)
   }
 
@@ -47,7 +47,7 @@ const App = () => {
         </Card>
         
         <Card animateHover size="4/12" key="card-3" scroll={false} small>
-          <ContactCardContent contactCardClicked={contactCardClicked} cycleContantCardState={cycleContantCardState} locale={locale[lang]} />
+          <ContactCardContent contactCardClicked={contactCardClicked} cycleContactCardState={cycleContactCardState} locale={locale[lang]} />
         </Card>
         <Card animateHover href="/projects" size="2/5" language={lang}>
           <h2 className="m-auto text-3xl underline">

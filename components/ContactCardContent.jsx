@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import { AiOutlineMail } from "react-icons/ai";
 
 const TitleCardContent = ({
-  cycleContantCardState,
+  cycleContactCardState,
   contactCardClicked,
   locale,
 }) => {
   return (
     <motion.div
-      onClick={() => cycleContantCardState()}
+      onClick={() => cycleContactCardState()}
       className="w-full h-full flex p-2"
     >
       {!contactCardClicked ? (
