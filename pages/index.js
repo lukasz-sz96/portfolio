@@ -64,7 +64,7 @@ const App = () => {
           />
         </Card>
         <Card animateHover href="/projects" size="2/5" language={lang}>
-          <h2 className="m-auto text-3xl underline">
+          <h2 className="m-auto text-3xl underline select-none">
             {locale[lang]["myProjects"]}
           </h2>
         </Card>

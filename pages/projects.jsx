@@ -21,7 +21,7 @@ const Projects = (props) => {
         <title>Portfolio</title>
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <div className="flex flex-col md:flex-row flex-wrap md:pl-32 md:pr-32 md:pt-10">
+      <div className="flex flex-col md:flex-row flex-wrap md:pl-32 md:pr-32 md:pt-10 select-none">
         <Card
           href=""
           size="1/3"

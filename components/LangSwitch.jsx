@@ -11,7 +11,7 @@ const LangSwitch = ({ language, cycleLanguage }) => {
   return (
     <motion.button
       onClick={() => cycleLanguage()}
-      className="fixed bottom-4 right-4 rounded-md gradient p-2 text-white"
+      className="fixed bottom-4 right-4 rounded-md gradient p-2 text-white focus:outline-none"
       initial={{ right: -100, opacity: 0 }}
       animate={{ right: 16, opacity: 1 }}
       transition={{ duration: 0.2 }}

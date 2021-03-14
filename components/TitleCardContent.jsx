@@ -10,7 +10,7 @@ const TitleCardContent = ({
       onClick={() => {
         cycleTitleCardState();
       }}
-      className="w-full h-full bg-black opacity-50 p-5 md:p-10 overflow-hidden"
+      className="w-full h-full bg-black opacity-50 p-5 md:p-10 overflow-hidden select-none"
     >
       {!titleCardClicked ? (
         <motion.div
