@@ -9,17 +9,16 @@ const LangSwitch = ({ language, cycleLanguage }) => {
     }
   };
   return (
-    
-      <motion.button
-        onClick={() => cycleLanguage()}
-        className="fixed bottom-4 right-4 rounded-md gradient p-2 text-white"
-        initial={{right: -100, opacity: 0}}
-        animate={{right: 16, opacity: 1}}
-        transition={{ duration: 0.2 }}
-        exit={{right: -200, opacity:0}}
-      >
-        Switch to {nextLanguageHint()}
-      </motion.button>
+    <motion.button
+      onClick={() => cycleLanguage()}
+      className="fixed bottom-4 right-4 rounded-md gradient p-2 text-white"
+      initial={{ right: -100, opacity: 0 }}
+      animate={{ right: 16, opacity: 1 }}
+      transition={{ duration: 0.2 }}
+      exit={{ right: -200, opacity: 0 }}
+    >
+      Switch to {nextLanguageHint()}
+    </motion.button>
   );
 };
 

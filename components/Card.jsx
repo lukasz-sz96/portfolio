@@ -75,9 +75,9 @@ const Card = ({
       whileHover={animateHover && { scale: 1.03 }}
       transition={{ duration: 0.2 }}
       exit={{ opacity: 0, scale: 0.5 }}
-      className={`${gradient && "gradient"} min-w-1/2 transition-all md:w-${size} h-${
-        small ? "36" : "96"
-      } ${
+      className={`${
+        gradient && "gradient"
+      } min-w-1/2 transition-all md:w-${size} h-${small ? "36" : "96"} ${
         red ? "bg-red-700" : "bg-gray-700"
       } mb-4 md:m-3 text-left text-white flex flex-row flex-wrap`}
     >
