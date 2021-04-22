@@ -18,7 +18,10 @@ const Projects = (props) => {
   return (
     <div>
       <Head>
-        <title>Portfolio</title>
+        <title>Portfolio - Projekty</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta charSet="utf-8" />
+        <meta name="description" content="Łukasz Szczęsny - Projekty." />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <div className="flex flex-col md:flex-row flex-wrap md:pl-32 md:pr-32 md:pt-10 select-none">

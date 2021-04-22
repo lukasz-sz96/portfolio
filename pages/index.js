@@ -35,6 +35,9 @@ const App = () => {
     <div>
       <Head>
         <title>Portfolio</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta charSet="utf-8" />
+        <meta name="description" content="Łukasz Szczęsny - Portfolio." />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <div className="flex flex-col md:flex-row flex-wrap md:pl-32 md:pr-32 md:pt-10 max-h-full">

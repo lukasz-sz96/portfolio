@@ -29,6 +29,7 @@ const TitleCardContent = ({
           <img
             className="w-1/4 max-w-full m-auto mt-5 animate-bounce"
             src="../img/tap.svg"
+            alt="click-me-icon"
           />
         </motion.div>
       ) : (
