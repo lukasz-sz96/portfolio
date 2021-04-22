@@ -9,7 +9,7 @@ module.exports = {
       "./components/*.{js,ts,jsx,tsx}",
     ],
     options: {
-      safelist: ["h-36", "h-96", "w-1\/4", "w-2\/4", "w-1\/3", "4\/12", "2\/5"],
+      safelist: ["h-36", "h-96", "w-1\/4", "w-2\/4", "w-1\/3", "4\/12", "2\/5", "transition-all", "transform"],
     },
   },
   presets: [],

@@ -10,7 +10,7 @@ const TitleCardContent = ({
       onClick={() => {
         cycleTitleCardState();
       }}
-      className="w-full h-full bg-black opacity-50 p-5 md:p-10 overflow-hidden select-none"
+      className="h-full bg-black w-full opacity-50 p-5 md:p-10 overflow-hidden select-none"
     >
       {!titleCardClicked ? (
         <motion.div
@@ -27,7 +27,7 @@ const TitleCardContent = ({
           <br />
           <p>{locale["title"][3]}</p>
           <img
-            className="w-1/4 max-w-full m-auto mt-5 animate-bounce"
+            className="w-1/4 m-auto mt-5 animate-bounce"
             src="../img/tap.svg"
             alt="click-me-icon"
           />
@@ -38,7 +38,7 @@ const TitleCardContent = ({
           initial={{ opacity: 0, scale: 1.2, translateY: 100 }}
           animate={{ opacity: 1, scale: 1.1, translateY: 0 }}
           transition={{ duration: 0.3 }}
-          className="text-xs md:text-1/2sm 2xl:text-sm m-2 mt-0 pt-0"
+          className="text-xs md:text-1/2sm 2xl:text-sm m-2 mt-0 pt-0 max-w-screen-sm"
         >
           <p>{locale["titleDescription"][0]}</p>
           <br />
